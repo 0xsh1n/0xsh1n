@@ -124,15 +124,17 @@ body {
     
     width: 60px;
     height: 60px;
-    transition: transform 0.3s ease-in-out;
     margin: 0 5px;
     justify-content: center;
     align-content: center;
 }
-
-.imgsize:hover {
-    transform: scale(1.2); 
+.image-row img:hover {
+  transition: transform 0.3s ease-in-out !important;
+    transform: scale(1.2) !important;
+    
 }
+
+
 
 @media only screen and (max-width: 767px) {
   .center-container {
@@ -187,7 +189,6 @@ hr {
  .image-row img {
    width: 60px;
     height: 60px;
-    transition: transform 0.3s ease-in-out;
     margin: 0 5px;
     
 }
