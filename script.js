@@ -15,7 +15,9 @@ function initScrollReveal() {
     duration: 2000,
   });
 
-  sr.reveal(".prj");
+  sr.reveal(".prje", { delay: 200 });
+  sr.reveal(".prj", { delay: 300 });
+  sr.reveal(".prjs", { interval: 400 });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,4 +26,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const typingElement = document.querySelector('.typing-animation');
   typeWrite(typingElement);
 });
+
+function hoverChangeDescription(targetElement) {
+    const changeDescription = document.querySelector(".default-text");
+
+    targetElement.addEventListener("mouseover", () => {
+        const newText = targetElement.getAttribute('changeText');
+        changeText(newText);
+    });
+
+    targetElement.addEventListener("mouseout", () => {
+        resetText();
+    });
+
+    function changeText(newText) {
+        changeDescription.innerHTML = newText;
+    }
+
+    function resetText() {
+        changeDescription.innerHTML = "languages / tools";
+    }
+}
+
+
+const imgElements = document.querySelectorAll('.imgsize');
+imgElements.forEach((img) => {
+    hoverChangeDescription(img);
+});
+
 
