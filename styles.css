@@ -21,7 +21,6 @@ body {
     
 }
 
-
 .typing-animation {
     font-size: 20px;
     
@@ -30,6 +29,14 @@ body {
     
 }
 
+.default-text {
+  font-size: 20px;
+  height: 1em;
+  text-align: left; 
+  margin-left: 50px;
+  white-space: normal;
+  max-width: 90%;
+}
 
 .projects-container {
     opacity: 50px;
@@ -38,16 +45,27 @@ body {
 }
 .projects-container2 {
     opacity: 50px;
-    text-align: center; 
+    text-align: left; 
     margin-top: 50px; 
+    
 }
 
 
 
 .projects-title {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
-    margin-left: 20px; 
+    font-weight: 1000;
+    
+}
+
+.projects-title2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-left: 50px; 
+    text-align: left;
+    
+    font-weight: 1000;
 }
 .project-box {
     text-align: left;
@@ -57,16 +75,64 @@ body {
     margin-top: 50px;
 }
 
+.typing-animation:after {
+        content: "|";
+        margin-left: 8px;
+        opacity: 1;
+        animation: blink 1s infinite;
+        color: cyan;
+}
+
+@keyframes blink {
+        0%,100% {
+                opacity: 1;
+        }
+
+        50% {
+                opacity: 0;
+        }
+}
 .link {
     
     text-decoration: none;
     color: cyan;
 }
 
-.project-box:nth-child(2n) {
-    margin-right: 0;
+
+
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    
+    
+}
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+    margin-top: 100px;
+}
+.arrow {
+  color: cyan;
 }
 
+.image-row img {
+    
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 5px;
+    justify-content: center;
+    align-content: center;
+}
+
+.imgsize:hover {
+    transform: scale(1.2); 
+}
 
 @media only screen and (max-width: 767px) {
   .center-container {
@@ -85,15 +151,46 @@ body {
     margin-left: 0;
     font-size: 18px; 
   }
-  .projects-title {
-    margin-left: 0; 
-  }
+
   .projects-title {
     font-size: 15px;
     text-align: center;
     
     
    }
-
+  .projects-title2 {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .default-text {
+    margin-left: 10px;
+  }
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
 }
 
+hr {
+  display: none;
+}
+.image-row {
+    display: grid;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+ .image-row img {
+   width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 5px;
+    
+}
+
+
+}
