@@ -53,14 +53,14 @@ body {
 
 
 .projects-title {
-    font-size: 30px;
+    font-size: 45px;
     margin-bottom: 10px;
     font-weight: 1000;
     
 }
 
 .projects-title2 {
-    font-size: 30px;
+    font-size: 45px;
     margin-bottom: 5px;
     margin-left: 50px; 
     text-align: left;
@@ -106,10 +106,12 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     
     
 }
+
+
 .image-row {
     display: flex;
     justify-content: space-around;
@@ -134,8 +136,15 @@ body {
     
 }
 
+.footer {
+  text-align: left;
+  margin-left: 30px;
+  font-size: 7px;
+}
 
-
+.footer-container {
+  margin-bottom: 80px;
+}
 @media only screen and (max-width: 767px) {
   .center-container {
     top: 50%;
@@ -155,13 +164,13 @@ body {
   }
 
   .projects-title {
-    font-size: 15px;
+    font-size: 25px;
     text-align: center;
     
     
    }
   .projects-title2 {
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 10px;
   }
   .default-text {
@@ -192,6 +201,10 @@ hr {
     margin: 0 5px;
     
 }
-
+  .footer {
+    text-align: center;
+    margin-left: 0;
+    font-size: 20px;
+  }
 
 }
