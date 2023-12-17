@@ -41,7 +41,7 @@ body {
 .projects-container {
     opacity: 50px;
     text-align: center; 
-    margin-top: 2000px;
+    margin-top: 1300px;
     margin-bottom: 50px;
 }
 .projects-container2 {
@@ -194,12 +194,12 @@ body {
 }
 
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 786px) {
   .center-container {
     top: 50%;
   }
   .projects-container {
-    margin-top: 700px;
+    margin-top: 1000px;
     padding: 10px; 
     text-align: center; 
   }
