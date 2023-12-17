@@ -194,7 +194,7 @@ body {
 }
 
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 767px) {
   .center-container {
     top: 50%;
   }
