@@ -15,14 +15,14 @@ body {
 
 .text-container {
     opacity: 50px;
-    font-size: 30px;
+    font-size: 40px;
 
     font-weight: 1000;
 
 }
 
 .typing-animation {
-    font-size: 20px;
+    font-size: 24px;
 
 
     height: 1em;
@@ -30,7 +30,7 @@ body {
 }
 
 .default-text {
-  font-size: 20px;
+  font-size: 24px;
   height: 1em;
   text-align: left; 
   margin-left: 50px;
@@ -203,6 +203,12 @@ body {
     padding: 10px; 
     text-align: center; 
   }
+  .text-container {
+    font-size: 30px;
+  }
+  .typing-animation {
+    font-size: 18px;
+  }
   .hobbies-container {
     margin: 0 10px;
   }
@@ -234,6 +240,7 @@ body {
   }
   .default-text {
     margin-left: 10px;
+    font-size: 20px;
   }
 .image-container {
     display: grid;
