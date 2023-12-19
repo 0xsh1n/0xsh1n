@@ -260,7 +260,7 @@ body {
     background-color: transparent; 
      border: 2px solid var(--background-color);
     box-sizing: border-box; 
-    transition: border-color 0.3s ease-in-out, border var(--transition-duration) !important;
+    transition: border-color 0.3s ease-in-out, border var(--transition-duration);
 }
 
 
