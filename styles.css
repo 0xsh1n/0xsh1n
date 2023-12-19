@@ -1,32 +1,83 @@
+:root {
+  --background-color: black;
+  --text-color: white;
+  --cyan-color: cyan;
+  --transition-duration: 0.3s;
+  
+}
+
+
+.moon-logo {
+    display: none;
+}
+
+
+.light-mode .moon-logo {
+    display: block;
+    
+    
+}
+.light-mode .sun-logo {
+  display: none;
+}
+
+.sun,
+.moon {
+  width: 60px;
+  
+}
+
+.light-mode {
+  --background-color: white;
+  --text-color: black;
+  --cyan-color: darkcyan;
+  --transition-duration: 0.3s;
+}
+.light-mode body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+}
+
+.light-mode .link {
+  color: var(--cyan-color);
+}
+
+.light-mode .typing-animation:after {
+  color: var(--cyan-color);
+}
+
+.light-mode .arrow {
+    color: var(--cyan-color);
+}
+.light-mode .hobbies-box2:hover {
+  border-color: var(--cyan-color) !important;
+}
+.light-mode .hobbies-box:hover {
+  border-color: var(--cyan-color) !important;
+}
 body {
-    margin: 0;
-    background-color: black;
-    color: white;
-    font-family: "Rajdhani";
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Rajdhani";
+  transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
 .center-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  margin-top: 50vh;
+  margin-bottom: 50vh;
     text-align: center;
 }
 
 .text-container {
-    opacity: 50px;
-    font-size: 40px;
-
-    font-weight: 1000;
-
+  font-size: 30px;
+      opacity: 50px;
+      font-weight: 600;
 }
-
 .typing-animation {
-    font-size: 24px;
-
-
-    height: 1em;
-
+  font-size: 24px;
+  margin: 0 20px;
 }
 
 .default-text {
@@ -39,10 +90,10 @@ body {
 }
 
 .projects-container {
+    
     opacity: 50px;
-    text-align: center; 
-    margin-top: 1300px;
     margin-bottom: 50px;
+    
 }
 .projects-container2 {
     opacity: 50px;
@@ -51,12 +102,29 @@ body {
 
 }
 
+.light-mode .switch-container {
+  border-bottom: 0.2px solid var(--text-color);
+  background-color: white;
+}
+.switch-container {
+  position: fixed;
+  border-bottom: 0.2px solid white;
+  width: 100%;
+  z-index: 1000;
+  background-color: black;
+  top: 0;
+  transition: background-color var(--transition-duration);
+}
 
-
+.switch {
+  padding: 30px;
+  
+  position: relative;
+}
 .projects-title {
     font-size: 45px;
     margin-bottom: 10px;
-    font-weight: 1000;
+    text-align: center;
 
 }
 
@@ -66,7 +134,7 @@ body {
     margin-left: 50px; 
     text-align: left;
 
-    font-weight: 1000;
+    
 }
 .project-box {
     text-align: left;
@@ -81,7 +149,8 @@ body {
         margin-left: 8px;
         opacity: 1;
         animation: blink 1s infinite;
-        color: cyan;
+        color: var(--cyan-color);
+        transition: color var(--transition-duration);
 }
 
 @keyframes blink {
@@ -96,7 +165,8 @@ body {
 .link {
 
     text-decoration: none;
-    color: cyan;
+    color: var(--cyan-color);
+    transition: color var(--transition-duration);
 }
 
 
@@ -120,7 +190,8 @@ body {
     margin-top: 100px;
 }
 .arrow {
-  color: cyan;
+  color: var(--cyan-color);
+  transition: color var(--transition-duration);
 }
 
 .image-row img {
@@ -165,9 +236,9 @@ body {
     padding: 20px;
     font-size: 24px;
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid var(--background-color);
     box-sizing: border-box; 
-    transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out, border var(--transition-duration);
     margin-bottom: 150px;
 }
 
@@ -177,31 +248,35 @@ body {
   font-weight: 1000;
 }
 .hobbies-box:hover {
-    border-color: cyan;
+    border-color: var(--cyan-color) !important;
 }
 
 .hobbies-box2:hover {
-    border-color: cyan;
+    border-color: var(--cyan-color);
 }
 .hobbies-box {
     width: calc(50% - 10px); 
     padding: 20px;
     font-size: 24px;
     background-color: transparent; 
-     border: 2px solid black;
+     border: 2px solid var(--background-color);
     box-sizing: border-box; 
-    transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out, border var(--transition-duration) !important;
 }
 
 
 @media screen and (max-width: 767px) {
-  .center-container {
-    top: 50%;
+  .sun, .moon {
+    width: 30px;
+  }
+  .switch {
+    padding: 10px 20px;
   }
   .projects-container {
-    margin-top: 800px;
     padding: 10px; 
     text-align: center; 
+    
+    
   }
   .text-container {
     font-size: 30px;
@@ -289,11 +364,19 @@ display: flex;
     margin-bottom: 100px;
 
 }
-.hobbies-box,
+.hobbies-box {
+  width: 80%;
+
+    margin: 0 20px; 
+    padding: 10px; 
+    align-items: center;
+    font-size: 18px;
+    box-sizing: border-box;
+}
   .hobbies-box2 {
     width: 80%;
-    
-    margin: 0 20px; 
+
+    margin: 20px 20px; 
     padding: 10px; 
     align-items: center;
     font-size: 18px;
