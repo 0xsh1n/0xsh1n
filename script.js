@@ -48,10 +48,21 @@ function hoverChangeDescription(targetElement) {
     }
 }
 
-
 const imgElements = document.querySelectorAll('.imgsize');
 imgElements.forEach((img) => {
     hoverChangeDescription(img);
+});
+
+
+
+document.querySelector(".switch-container").addEventListener("click", () => {
+    const sunLogo = document.querySelector(".sun-logo");
+    const moonLogo = document.querySelector(".moon-logo");
+    const body = document.querySelector("body");
+
+    sunLogo.classList.toggle("animate-sun");
+    moonLogo.classList.toggle("animate-moon");
+    body.classList.toggle("light-mode");
 });
 
 
