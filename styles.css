@@ -29,6 +29,7 @@
 
 .hobbies-box2 h3, .hobbies-box h3, .project-box h3 {
   font-weight: 500;
+  margin: 0;
 }
 .light-mode {
   --background-color: white;
@@ -94,12 +95,35 @@ body {
   max-width: 90%;
 }
 
-.projects-container {
-    
-    opacity: 50px;
-    margin-bottom: 50px;
+  .projects-container {
+    margin: 0 50px;
     
 }
+
+.project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 20px;
+    
+    
+}
+
+
+.project-box {
+width: calc(50% - 10px); 
+    font-size: 24px;
+    background-color: transparent;
+    border: 2px solid var(--background-color);
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease-in-out, border var(--transition-duration);
+   
+   padding: 20px;
+ }
+.project-box:hover {
+    border-color: var(--cyan-color);
+}
+
 .projects-container2 {
     opacity: 50px;
     text-align: left; 
@@ -128,7 +152,7 @@ body {
 }
 .projects-title h2 {
     font-size: 45px;
-    margin-bottom: 10px;
+    
     text-align: center;
     font-weight: 500;
 
@@ -143,13 +167,7 @@ body {
 
     
 }
-.project-box {
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    margin-top: 50px;
-}
+
 
 .typing-animation:after {
         content: "|";
@@ -267,6 +285,7 @@ body {
 .hobbies-box2:hover {
     border-color: var(--cyan-color);
 }
+
 .hobbies-box {
     width: calc(50% - 10px); 
     padding: 20px;
@@ -285,12 +304,13 @@ body {
   .switch {
     padding: 10px 20px;
   }
-  .projects-container {
-    padding: 10px; 
-    text-align: center; 
-    
-    
+  
+  .project-wrapper {
+    display: block;
+    text-align: left;
+    flex-wrap: none;
   }
+
   .text-container {
     font-size: 30px;
     font-weight: 400;
@@ -302,17 +322,17 @@ body {
   .hobbies-container {
     margin: 0 10px;
   }
+  .projects-container {
+    margin: 0 10px;
+  }
   .hobbies-left {
     margin: 0 10px;
   }
   .projects-container2 {
-    margin-top: 10px;
+    margin: 0 10px;
 
   }
-  .project-box {
-    margin-left: 0;
-    font-size: 18px; 
-  }
+
 
   .projects-title h2 {
     font-size: 40px;
@@ -382,6 +402,15 @@ display: flex;
     margin: 0;
     margin-bottom: 100px;
 
+}
+.project-box {
+  width: 95%;
+    border: none;
+    
+    align-items: center;
+    font-size: 18px;
+    text-align: left;
+    box-sizing: border-box;
 }
 .hobbies-box {
   width: 80%;
